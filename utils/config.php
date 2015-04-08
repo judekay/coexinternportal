@@ -6,7 +6,7 @@
  * Time: 3:44 PM
  * To change this template use File | Settings | File Templates.
  */
-define('DBNAME', 'campusshop');
+define('DBNAME', 'coeximp');
 define('DBHOST','localhost');
 define('DBUSER', 'root');
 define('DBPASSWORD', '');
