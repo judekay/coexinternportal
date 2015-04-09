@@ -67,4 +67,12 @@ class admin {
             return $addadmin;
         }
 
+//function to remove an admin by superadmin
+        public function removeadmin($user_auth_id){
+            $sql = "UPDATE admin SET status_id = 0 WHERE user_auth_id = :user_auth_id";
+            $this->sql_client->query($sql);
+            $this->sql_client->bind(":user_auth_id",$user_auth_id );
+            return $this->sql_client->execute();
+        }
+
 }
