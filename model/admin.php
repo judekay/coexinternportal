@@ -61,4 +61,10 @@ class admin {
 
         }
 
+// function to add a new admin
+        public function addadmin($username, $password, $firstname, $lastname, $email, $usertype_id){
+            $addadmin = $this->adminregister($username, $password, $firstname, $lastname, $email, $usertype_id);
+            return $addadmin;
+        }
+
 }
