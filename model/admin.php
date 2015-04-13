@@ -40,7 +40,7 @@ class admin {
 
 //    function to add an admin or supervisor in the database
         public function adminregister($username, $password, $firstname, $lastname, $email, $usertype_id){
-            //initialise the parameters username, password, firstname, lastname, email, usertype_id
+            //initialise the , password, firstname, lastname, email, usertype_id
             $this->username = $username;
             $this->password = $password;
             $this->usertype = $usertype_id;
