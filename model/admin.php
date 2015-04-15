@@ -75,4 +75,23 @@ class admin {
             return $this->sql_client->execute();
         }
 
+//function to remove user by superadmin
+        public function removeuser($user_auth_id){
+            $sql = "UPDATE user_auth SET status_id = 0 WHERE user_auth_id = :user_auth_id";
+            $this->sql_client->query($sql);
+            $this->sql_client->bind(":user_auth_id", $user_auth_id);
+            return $this->sql_client->execute();
+        }
+
+//function to add supervisor by superadmin
+        public function addsupervisor($username, $password, $firstname, $lastname, $email, $usertype_id){
+            $addadmin = $this->adminregister($username, $password, $firstname, $lastname, $email, $usertype_id);
+            return $addadmin;
+        }
+
+//function to assign supervisor to interns
+        public function assignsupervisor(){
+
+        }
+
 }
